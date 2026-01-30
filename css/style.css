@@ -311,10 +311,10 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 160px;
+    height: 80px;
     max-width: 1400px;
     margin: 0 auto;
-    padding: var(--space-md) var(--space-xl);
+    padding: 0 var(--space-xl);
     position: relative;
     overflow: visible;
 }
@@ -336,10 +336,13 @@ button {
 }
 
 .logo-image {
-    height: 200px;
+    height: 120px;
     width: auto;
     display: block;
     object-fit: contain;
+    position: absolute;
+    top: 10px;
+    z-index: 201;
 }
 
 .logo-icon {
