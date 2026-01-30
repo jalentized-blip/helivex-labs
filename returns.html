@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returns Policy | Helivex Labs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 50 50" class="logo-helix">
+                        <path d="M15,5 Q25,12 35,5 Q25,20 15,25 Q25,30 35,25 Q25,38 15,45" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                        <path d="M35,5 Q25,12 15,5 Q25,20 35,25 Q25,30 15,25 Q25,38 35,45" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                    </svg>
+                </div>
+                <span class="logo-text">HELIVEX<span class="logo-accent">LABS</span></span>
+            </a>
+
+            <nav class="nav-main" id="nav-main">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="coa.html" class="nav-link">COA Library</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="dashboard.html" class="account-link" aria-label="Account">
+                    <i class="fas fa-user"></i>
+                </a>
+                <button class="cart-toggle" id="cart-toggle" aria-label="Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" id="cart-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+        </div>
+    </aside>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Shipping & Returns Policy</h1>
+            <p>Our commitment to quality, safety, and transparency.</p>
+        </div>
+    </section>
+
+    <!-- Policy Content -->
+    <section class="policy-content section">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            
+            <div class="policy-block" style="margin-bottom: 40px;">
+                <h2>Lost, Stolen, or Missing Packages (Delivered Status)</h2>
+                <p>Helivex Labs cannot be held liable for orders that have been marked as "Delivered" by the shipping carrier but are subsequently lost or stolen. This policy covers theft from doorsteps, mailrooms, reception areas, lockers, or any other delivery point.</p>
+                <p><strong>Customer Responsibilities:</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 20px; color: var(--gray-600);">
+                    <li>Provide a secure location for delivery.</li>
+                    <li>Actively track your package to know when it arrives.</li>
+                    <li>Collect your package as soon as it is delivered.</li>
+                </ul>
+                <p>If package theft is a potential issue in your area, we strongly advise using carrier hold-for-pickup services or requesting signature confirmation where possible.</p>
+            </div>
+
+            <div class="policy-block" style="margin-bottom: 40px;">
+                <h2>Damaged Items, Non-Delivery, or Fulfillment Errors</h2>
+                <p>Any issues regarding shipping—excluding theft after delivery—must be reported to us within <strong>seven (7) calendar days</strong> of the delivery or attempted delivery date. Claims made after this period will not be accepted.</p>
+                <p>For claims regarding damaged goods, missing items, or errors in fulfillment, you must provide the following evidence:</p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 20px; color: var(--gray-600);">
+                    <li>A complete video of the unboxing process, starting from opening the sealed package.</li>
+                    <li>Clear photographs of the exterior packaging.</li>
+                    <li>Clear photographs of the items inside.</li>
+                    <li>A clear photo of the packing slip included with your order.</li>
+                    <li>Your tracking number.</li>
+                    <li>A brief written explanation of the problem.</li>
+                </ul>
+                <p>Claims submitted without all the required documentation will be denied. If we verify that an error occurred on our end or during shipping, we will reship the affected items at no extra cost. We do not offer cash refunds for these issues.</p>
+            </div>
+
+            <div class="policy-block" style="margin-bottom: 40px;">
+                <h2>Cancellations, Returns, and Refunds</h2>
+                <p>All sales are considered final. Once an order is placed, it cannot be modified or cancelled.</p>
+                <p>Due to the specific regulatory and safety nature of research compounds:</p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 20px; color: var(--gray-600);">
+                    <li><strong>We do not accept returns</strong> under any circumstances.</li>
+                    <li>Refunds will not be issued for "change of mind," user error, or if a delivery is refused.</li>
+                    <li>Any chargebacks initiated for packages that were delivered or stolen will be disputed with full documentation.</li>
+                    <li>Reshipments are the only remedy available, and only for verified fulfillment errors or shipping damage meeting the documentation criteria above.</li>
+                </ul>
+            </div>
+
+            <div class="policy-block">
+                <h2>Our Agreement</h2>
+                <p>We are dedicated to fulfilling orders accurately and shipping them promptly. These policies are in place to ensure fairness and prevent abuse. By purchasing from Helivex Labs, you agree to adhere to these terms.</p>
+            </div>
+
+            <div class="faq-contact" style="margin-top: 60px;">
+                <h3>Need Assistance?</h3>
+                <p>If you have a valid claim or question regarding your order, please contact our support team.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Support</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-disclaimer">
+                    <p><strong>Disclaimer:</strong> All products are for laboratory research purposes only. Not for human consumption.</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Helivex Labs. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
