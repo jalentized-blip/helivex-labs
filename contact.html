@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Helivex Labs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 50 50" class="logo-helix">
+                        <path d="M15,5 Q25,12 35,5 Q25,20 15,25 Q25,30 35,25 Q25,38 15,45" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                        <path d="M35,5 Q25,12 15,5 Q25,20 35,25 Q25,30 15,25 Q25,38 35,45" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                    </svg>
+                </div>
+                <span class="logo-text">HELIVEX<span class="logo-accent">LABS</span></span>
+            </a>
+
+            <nav class="nav-main" id="nav-main">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="coa.html" class="nav-link">COA Library</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="dashboard.html" class="account-link" aria-label="Account">
+                    <i class="fas fa-user"></i>
+                </a>
+                <button class="cart-toggle" id="cart-toggle" aria-label="Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" id="cart-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+        </div>
+    </aside>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help with any questions about our products or your orders.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content section">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions about our research peptides? Need help with an order? Our team is ready to assist you.</p>
+
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email Support</h4>
+                                <p>support@helivexlabs.com</p>
+                                <span>Response within 24 hours</span>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday</p>
+                                <span>9:00 AM - 6:00 PM EST</span>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Live Chat</h4>
+                                <p>Available during business hours</p>
+                                <span>Average response: 5 minutes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-contact">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <form class="contact-form" id="contact-form">
+                        <h3>Send Us a Message</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a topic...</option>
+                                <option value="order">Order Inquiry</option>
+                                <option value="product">Product Question</option>
+                                <option value="shipping">Shipping Issue</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="wholesale">Wholesale Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="order-number">Order Number (if applicable)</label>
+                            <input type="text" id="order-number" name="orderNumber" placeholder="HLX-XXXXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter for product updates and promotions</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="quick-help">
+                <h3>Quick Help</h3>
+                <div class="help-links">
+                    <a href="faq.html" class="help-link">
+                        <i class="fas fa-question-circle"></i>
+                        <div>
+                            <span>FAQ</span>
+                            <p>Find answers to common questions</p>
+                        </div>
+                    </a>
+                    <a href="shipping.html" class="help-link">
+                        <i class="fas fa-truck"></i>
+                        <div>
+                            <span>Shipping Info</span>
+                            <p>Learn about our shipping options</p>
+                        </div>
+                    </a>
+                    <a href="returns.html" class="help-link">
+                        <i class="fas fa-undo"></i>
+                        <div>
+                            <span>Returns Policy</span>
+                            <p>View our return guidelines</p>
+                        </div>
+                    </a>
+                    <a href="coa.html" class="help-link">
+                        <i class="fas fa-file-alt"></i>
+                        <div>
+                            <span>COA Library</span>
+                            <p>Access product documentation</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-disclaimer">
+                    <p><strong>Disclaimer:</strong> All products are for laboratory research purposes only. Not for human consumption.</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Helivex Labs. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const btn = this.querySelector('button[type="submit"]');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            btn.disabled = true;
+
+            // Simulate form submission
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                btn.style.background = 'var(--success)';
+
+                setTimeout(() => {
+                    this.reset();
+                    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    btn.style.background = '';
+                    btn.disabled = false;
+
+                    // Show success notification
+                    const notification = document.createElement('div');
+                    notification.innerHTML = '<i class="fas fa-check-circle"></i> Your message has been sent. We\'ll respond within 24 hours.';
+                    notification.style.cssText = `
+                        position: fixed;
+                        bottom: 20px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: var(--success);
+                        color: white;
+                        padding: 16px 24px;
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                        z-index: 1000;
+                    `;
+                    document.body.appendChild(notification);
+                    setTimeout(() => notification.remove(), 5000);
+                }, 2000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

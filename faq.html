@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Helivex Labs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 50 50" class="logo-helix">
+                        <path d="M15,5 Q25,12 35,5 Q25,20 15,25 Q25,30 35,25 Q25,38 15,45" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                        <path d="M35,5 Q25,12 15,5 Q25,20 35,25 Q25,30 15,25 Q25,38 35,45" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                    </svg>
+                </div>
+                <span class="logo-text">HELIVEX<span class="logo-accent">LABS</span></span>
+            </a>
+
+            <nav class="nav-main" id="nav-main">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="coa.html" class="nav-link">COA Library</a></li>
+                    <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="dashboard.html" class="account-link" aria-label="Account">
+                    <i class="fas fa-user"></i>
+                </a>
+                <button class="cart-toggle" id="cart-toggle" aria-label="Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" id="cart-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+        </div>
+    </aside>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our products, ordering, and policies.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-content section">
+        <div class="container">
+            <div class="faq-categories">
+                <button class="faq-cat-btn active" data-category="all">All Questions</button>
+                <button class="faq-cat-btn" data-category="products">Products</button>
+                <button class="faq-cat-btn" data-category="ordering">Ordering</button>
+                <button class="faq-cat-btn" data-category="shipping">Shipping</button>
+                <button class="faq-cat-btn" data-category="payment">Payment</button>
+            </div>
+
+            <div class="faq-list">
+                <!-- Products -->
+                <div class="faq-item" data-category="products">
+                    <button class="faq-question">
+                        <span>What purity level are your peptides?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>All Helivex Labs peptides are manufactured to a minimum purity of 98%, with most products exceeding 99% purity. Every batch undergoes rigorous third-party HPLC and mass spectrometry testing. Certificates of Analysis (COA) are available for all products in our COA Library.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="products">
+                    <button class="faq-question">
+                        <span>Are your products intended for human use?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>No.</strong> All Helivex Labs products are sold strictly for in vitro research, laboratory experimentation, and educational purposes only. They are not intended for human or veterinary use, and are not to be used for food additives, drugs, or household chemicals. By purchasing, you confirm you are a qualified researcher or institution.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="products">
+                    <button class="faq-question">
+                        <span>How should I store my peptides?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For optimal stability, store lyophilized (powder) peptides at -20°C or colder. Once reconstituted, peptides should be stored at 4°C and used within 2-4 weeks. Always protect from light and moisture. Avoid repeated freeze-thaw cycles by aliquoting reconstituted peptides into smaller portions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="products">
+                    <button class="faq-question">
+                        <span>What is the shelf life of your products?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Properly stored lyophilized peptides maintain their integrity for 24+ months when kept at -20°C. Reconstituted peptides should be used within 2-4 weeks when refrigerated. All products display manufacturing and expiration dates on the label.</p>
+                    </div>
+                </div>
+
+                <!-- Ordering -->
+                <div class="faq-item" data-category="ordering">
+                    <button class="faq-question">
+                        <span>Do I need to create an account to order?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No, you can checkout as a guest. However, creating an account provides benefits including order tracking, faster checkout, order history access, and eligibility for our referral program rewards.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="ordering">
+                    <button class="faq-question">
+                        <span>What is the minimum order quantity?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>There is no minimum order quantity. You can purchase single vials of any product. We also offer bulk pricing for larger orders - contact us for institutional or volume pricing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="ordering">
+                    <button class="faq-question">
+                        <span>Can I modify or cancel my order?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Orders can be modified or cancelled within 1 hour of placement. After that window, orders enter processing and cannot be changed. Please contact support@helivexlabs.com immediately if you need to make changes.</p>
+                    </div>
+                </div>
+
+                <!-- Shipping -->
+                <div class="faq-item" data-category="shipping">
+                    <button class="faq-question">
+                        <span>How quickly do you ship orders?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Orders placed before 2PM EST on business days ship the same day. Orders placed after 2PM EST or on weekends/holidays ship the next business day. You'll receive a tracking number via email once your order ships.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="shipping">
+                    <button class="faq-question">
+                        <span>Do you ship internationally?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we ship to most countries worldwide. International shipments typically arrive within 7-14 business days depending on destination and customs processing. Note that the customer is responsible for any import duties or taxes. Some countries have restrictions on peptide imports - please verify your local regulations before ordering.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="shipping">
+                    <button class="faq-question">
+                        <span>How are products packaged for shipping?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>All orders are shipped in discrete, plain packaging with no external branding. Products are packaged with appropriate insulation and cold packs when necessary to maintain stability during transit. Each vial is individually sealed and protected.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="shipping">
+                    <button class="faq-question">
+                        <span>What if my package is damaged or lost?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We stand behind our products and shipping. If your package arrives damaged, please photograph the damage and contact us within 48 hours. For lost packages, contact us with your order number and we'll work with the carrier to resolve the issue or provide a replacement.</p>
+                    </div>
+                </div>
+
+                <!-- Payment -->
+                <div class="faq-item" data-category="payment">
+                    <button class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept cryptocurrency (Bitcoin, Ethereum, USDT, Litecoin) and major credit/debit cards (Visa, Mastercard, American Express). Crypto payments receive an automatic 10% discount at checkout.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="payment">
+                    <button class="faq-question">
+                        <span>How does cryptocurrency payment work?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>After placing your order, you'll receive a unique wallet address and the exact amount to send. Payment must be completed within 30 minutes. Once the blockchain confirms your transaction, your order will process automatically. You'll receive email updates throughout the process.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="payment">
+                    <button class="faq-question">
+                        <span>Is my payment information secure?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. All transactions are processed through industry-standard encrypted payment gateways. We never store your full credit card information on our servers. Cryptocurrency transactions are inherently secure through blockchain technology.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="payment">
+                    <button class="faq-question">
+                        <span>Do you offer refunds?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Due to the nature of research compounds, we cannot accept returns of opened products. Unopened products may be returned within 14 days for store credit. Defective or damaged products will be replaced at no charge. Please review our full Returns Policy for details.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-contact">
+                <h3>Still have questions?</h3>
+                <p>Our support team is ready to help with any questions not covered here.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-disclaimer">
+                    <p><strong>Disclaimer:</strong> All products are for laboratory research purposes only. Not for human consumption.</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Helivex Labs. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+
+                // Open clicked item if it was closed
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+
+        // FAQ Categories
+        document.querySelectorAll('.faq-cat-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.category;
+
+                // Update active button
+                document.querySelectorAll('.faq-cat-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Filter items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

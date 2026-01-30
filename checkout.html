@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Helivex Labs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="checkout-page">
+    <!-- Header -->
+    <header class="checkout-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 50 50" class="logo-helix">
+                        <path d="M15,5 Q25,12 35,5 Q25,20 15,25 Q25,30 35,25 Q25,38 15,45" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                        <path d="M35,5 Q25,12 15,5 Q25,20 35,25 Q25,30 15,25 Q25,38 35,45" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                    </svg>
+                </div>
+                <span class="logo-text">HELIVEX<span class="logo-accent">LABS</span></span>
+            </a>
+            <div class="checkout-steps">
+                <div class="step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-label">Information</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-label">Shipping</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-label">Payment</span>
+                </div>
+            </div>
+            <a href="shop.html" class="continue-shopping">
+                <i class="fas fa-arrow-left"></i>
+                Continue Shopping
+            </a>
+        </div>
+    </header>
+
+    <!-- Checkout Content -->
+    <main class="checkout-content">
+        <div class="container">
+            <div class="checkout-layout">
+                <!-- Checkout Form -->
+                <div class="checkout-form-section">
+                    <!-- Step 1: Information -->
+                    <div class="checkout-step active" id="step-1">
+                        <h2>Contact Information</h2>
+                        <p class="step-description">We'll use this to send your order confirmation and updates.</p>
+
+                        <form class="checkout-form" id="info-form">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Company / Institution (Optional)</label>
+                                <input type="text" id="company" name="company" placeholder="Research Lab, University, etc.">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000">
+                            </div>
+
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="createAccount">
+                                <label for="createAccount">Create an account for faster checkout next time</label>
+                            </div>
+
+                            <div class="form-actions">
+                                <a href="shop.html" class="btn btn-secondary">
+                                    <i class="fas fa-arrow-left"></i>
+                                    Return to Shop
+                                </a>
+                                <button type="submit" class="btn btn-primary">
+                                    Continue to Shipping
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Step 2: Shipping -->
+                    <div class="checkout-step" id="step-2">
+                        <h2>Shipping Address</h2>
+                        <p class="step-description">Enter your shipping details for delivery.</p>
+
+                        <form class="checkout-form" id="shipping-form">
+                            <div class="form-group">
+                                <label for="address">Street Address *</label>
+                                <input type="text" id="address" name="address" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address2">Apartment, Suite, etc. (Optional)</label>
+                                <input type="text" id="address2" name="address2">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State/Province *</label>
+                                    <input type="text" id="state" name="state" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="zip">ZIP/Postal Code *</label>
+                                    <input type="text" id="zip" name="zip" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country *</label>
+                                    <select id="country" name="country" required>
+                                        <option value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="FR">France</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="shipping-methods">
+                                <h3>Shipping Method</h3>
+                                <div class="shipping-option active">
+                                    <input type="radio" name="shipping" id="standard" value="standard" checked>
+                                    <label for="standard">
+                                        <div class="option-info">
+                                            <span class="option-name">Standard Shipping</span>
+                                            <span class="option-time">5-7 Business Days</span>
+                                        </div>
+                                        <span class="option-price">$9.99</span>
+                                    </label>
+                                </div>
+                                <div class="shipping-option">
+                                    <input type="radio" name="shipping" id="express" value="express">
+                                    <label for="express">
+                                        <div class="option-info">
+                                            <span class="option-name">Express Shipping</span>
+                                            <span class="option-time">2-3 Business Days</span>
+                                        </div>
+                                        <span class="option-price">$19.99</span>
+                                    </label>
+                                </div>
+                                <div class="shipping-option">
+                                    <input type="radio" name="shipping" id="overnight" value="overnight">
+                                    <label for="overnight">
+                                        <div class="option-info">
+                                            <span class="option-name">Overnight Shipping</span>
+                                            <span class="option-time">Next Business Day</span>
+                                        </div>
+                                        <span class="option-price">$39.99</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" onclick="goToStep(1)">
+                                    <i class="fas fa-arrow-left"></i>
+                                    Back to Information
+                                </button>
+                                <button type="submit" class="btn btn-primary">
+                                    Continue to Payment
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Step 3: Payment -->
+                    <div class="checkout-step" id="step-3">
+                        <h2>Payment Method</h2>
+                        <p class="step-description">Choose your preferred payment method. Crypto payments receive 10% discount!</p>
+
+                        <form class="checkout-form" id="payment-form">
+                            <div class="payment-methods">
+                                <div class="payment-method active" data-method="crypto">
+                                    <input type="radio" name="payment" id="crypto" value="crypto" checked>
+                                    <label for="crypto">
+                                        <div class="method-header">
+                                            <div class="method-icons">
+                                                <i class="fab fa-bitcoin"></i>
+                                                <i class="fab fa-ethereum"></i>
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                            <span class="method-name">Cryptocurrency</span>
+                                            <span class="method-badge">10% OFF</span>
+                                        </div>
+                                        <p class="method-description">Pay with Bitcoin, Ethereum, USDT, or other cryptocurrencies</p>
+                                    </label>
+                                </div>
+
+                                <div class="payment-method" data-method="card">
+                                    <input type="radio" name="payment" id="card" value="card">
+                                    <label for="card">
+                                        <div class="method-header">
+                                            <div class="method-icons">
+                                                <i class="fab fa-cc-visa"></i>
+                                                <i class="fab fa-cc-mastercard"></i>
+                                                <i class="fab fa-cc-amex"></i>
+                                            </div>
+                                            <span class="method-name">Credit/Debit Card</span>
+                                        </div>
+                                        <p class="method-description">Secure card payment processed by Stripe</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Crypto Payment Section -->
+                            <div class="payment-details crypto-details active" id="crypto-details">
+                                <div class="crypto-options">
+                                    <h4>Select Cryptocurrency</h4>
+                                    <div class="crypto-grid">
+                                        <button type="button" class="crypto-btn active" data-crypto="btc">
+                                            <i class="fab fa-bitcoin"></i>
+                                            <span>Bitcoin</span>
+                                            <span class="crypto-symbol">BTC</span>
+                                        </button>
+                                        <button type="button" class="crypto-btn" data-crypto="eth">
+                                            <i class="fab fa-ethereum"></i>
+                                            <span>Ethereum</span>
+                                            <span class="crypto-symbol">ETH</span>
+                                        </button>
+                                        <button type="button" class="crypto-btn" data-crypto="usdt">
+                                            <i class="fas fa-dollar-sign"></i>
+                                            <span>Tether</span>
+                                            <span class="crypto-symbol">USDT</span>
+                                        </button>
+                                        <button type="button" class="crypto-btn" data-crypto="ltc">
+                                            <span class="ltc-icon">Ł</span>
+                                            <span>Litecoin</span>
+                                            <span class="crypto-symbol">LTC</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="crypto-payment-info">
+                                    <div class="payment-qr">
+                                        <div class="qr-placeholder" id="crypto-qr">
+                                            <i class="fas fa-qrcode"></i>
+                                            <p>QR Code will appear after placing order</p>
+                                        </div>
+                                    </div>
+                                    <div class="payment-address">
+                                        <label>Payment Address</label>
+                                        <div class="address-field">
+                                            <input type="text" readonly value="Complete order to generate address" id="crypto-address">
+                                            <button type="button" class="copy-btn" onclick="copyAddress()">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                        <div class="payment-amount">
+                                            <span>Amount:</span>
+                                            <strong id="crypto-amount">--</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="crypto-notice">
+                                    <i class="fas fa-info-circle"></i>
+                                    <p>After placing your order, you'll receive payment details. Payment must be completed within 30 minutes.</p>
+                                </div>
+                            </div>
+
+                            <!-- Card Payment Section -->
+                            <div class="payment-details card-details" id="card-details">
+                                <div class="form-group">
+                                    <label for="cardName">Name on Card *</label>
+                                    <input type="text" id="cardName" name="cardName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number *</label>
+                                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="cardExpiry">Expiry Date *</label>
+                                        <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cardCvc">CVC *</label>
+                                        <input type="text" id="cardCvc" name="cardCvc" placeholder="123">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="terms" required>
+                                <label for="terms">I agree to the <a href="terms.html">Terms of Service</a> and confirm that all products are for research purposes only *</label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" onclick="goToStep(2)">
+                                    <i class="fas fa-arrow-left"></i>
+                                    Back to Shipping
+                                </button>
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-lock"></i>
+                                    Place Order
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <aside class="order-summary">
+                    <div class="summary-card">
+                        <h3>Order Summary</h3>
+
+                        <div class="summary-items" id="summary-items">
+                            <!-- Items loaded via JS -->
+                        </div>
+
+                        <div class="summary-coupon">
+                            <div class="coupon-form">
+                                <input type="text" placeholder="Discount code" id="coupon-input">
+                                <button type="button" class="btn btn-secondary" onclick="applyCoupon()">Apply</button>
+                            </div>
+                            <div class="coupon-applied" id="coupon-applied" style="display: none;">
+                                <span class="coupon-code"></span>
+                                <button type="button" class="remove-coupon" onclick="removeCoupon()">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="summary-totals">
+                            <div class="total-row">
+                                <span>Subtotal</span>
+                                <span id="summary-subtotal">$0.00</span>
+                            </div>
+                            <div class="total-row" id="discount-row" style="display: none;">
+                                <span>Discount</span>
+                                <span class="discount" id="summary-discount">-$0.00</span>
+                            </div>
+                            <div class="total-row" id="crypto-discount-row" style="display: none;">
+                                <span>Crypto Discount (10%)</span>
+                                <span class="discount" id="crypto-discount">-$0.00</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Shipping</span>
+                                <span id="summary-shipping">$9.99</span>
+                            </div>
+                            <div class="total-row grand-total">
+                                <span>Total</span>
+                                <span id="summary-total">$0.00</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-secure">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure checkout powered by industry-standard encryption</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal-overlay" id="confirmation-modal" style="display: none;">
+        <div class="confirmation-modal">
+            <div class="modal-icon success">
+                <i class="fas fa-check"></i>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Your order <strong id="order-number">#HLX-000000</strong> has been placed.</p>
+            <div class="crypto-payment-modal" id="crypto-payment-modal">
+                <h4>Complete Your Crypto Payment</h4>
+                <div class="modal-qr" id="modal-qr">
+                    <svg viewBox="0 0 100 100" class="qr-svg">
+                        <!-- Placeholder QR pattern -->
+                        <rect fill="#fff" width="100" height="100"/>
+                        <g fill="#000">
+                            <rect x="10" y="10" width="20" height="20"/>
+                            <rect x="70" y="10" width="20" height="20"/>
+                            <rect x="10" y="70" width="20" height="20"/>
+                            <rect x="35" y="10" width="5" height="5"/>
+                            <rect x="45" y="10" width="5" height="5"/>
+                            <rect x="35" y="20" width="5" height="5"/>
+                            <rect x="50" y="25" width="5" height="5"/>
+                            <rect x="40" y="35" width="5" height="5"/>
+                            <rect x="50" y="35" width="5" height="5"/>
+                            <rect x="35" y="45" width="5" height="5"/>
+                            <rect x="55" y="45" width="5" height="5"/>
+                            <rect x="40" y="55" width="5" height="5"/>
+                            <rect x="60" y="55" width="5" height="5"/>
+                            <rect x="45" y="65" width="5" height="5"/>
+                            <rect x="55" y="70" width="5" height="5"/>
+                            <rect x="35" y="80" width="5" height="5"/>
+                            <rect x="50" y="85" width="5" height="5"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="modal-address">
+                    <label>Send <span id="modal-crypto-amount">0.00 BTC</span> to:</label>
+                    <div class="address-display" id="modal-address">
+                        bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh
+                    </div>
+                </div>
+                <div class="payment-timer">
+                    <i class="fas fa-clock"></i>
+                    <span>Payment expires in: <strong id="payment-timer">30:00</strong></span>
+                </div>
+            </div>
+            <p class="confirmation-email">A confirmation email has been sent to <strong id="confirm-email"></strong></p>
+            <div class="modal-actions">
+                <a href="dashboard.html" class="btn btn-primary">View Order Status</a>
+                <a href="shop.html" class="btn btn-secondary">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

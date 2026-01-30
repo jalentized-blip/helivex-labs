@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Helivex Labs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 50 50" class="logo-helix">
+                        <path d="M15,5 Q25,12 35,5 Q25,20 15,25 Q25,30 35,25 Q25,38 15,45" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                        <path d="M35,5 Q25,12 15,5 Q25,20 35,25 Q25,30 15,25 Q25,38 35,45" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                    </svg>
+                </div>
+                <span class="logo-text">HELIVEX<span class="logo-accent">LABS</span></span>
+            </a>
+
+            <nav class="nav-main" id="nav-main">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link active">Shop</a></li>
+                    <li><a href="coa.html" class="nav-link">COA Library</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="dashboard.html" class="account-link" aria-label="Account">
+                    <i class="fas fa-user"></i>
+                </a>
+                <button class="cart-toggle" id="cart-toggle" aria-label="Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" id="cart-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+        </div>
+    </aside>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Product Content -->
+    <main class="product-page">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="shop.html">Shop</a>
+                <i class="fas fa-chevron-right"></i>
+                <span id="product-breadcrumb">Product</span>
+            </div>
+
+            <div class="product-layout">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="gallery-main">
+                        <div class="product-badge-large" id="product-badge"></div>
+                        <div class="product-image-large">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-features">
+                        <div class="feature-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>COA Available</span>
+                        </div>
+                        <div class="feature-badge">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Same-Day Shipping</span>
+                        </div>
+                        <div class="feature-badge">
+                            <i class="fab fa-bitcoin"></i>
+                            <span>Crypto Accepted</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-details">
+                    <div class="product-header">
+                        <span class="product-category-tag" id="product-category">Metabolic Research</span>
+                        <h1 id="product-name">Loading...</h1>
+                        <p class="product-short-desc" id="product-short-desc"></p>
+                    </div>
+
+                    <div class="product-purity-badge" id="product-purity">
+                        <i class="fas fa-check-circle"></i>
+                        <span>99%+ Verified Purity</span>
+                    </div>
+
+                    <div class="product-pricing" id="product-pricing">
+                        <div class="price-main">
+                            <span class="price-current" id="price-current">$0.00</span>
+                            <span class="price-original" id="price-original">$0.00</span>
+                            <span class="price-discount" id="price-discount">Save 20%</span>
+                        </div>
+                    </div>
+
+                    <div class="product-options">
+                        <label>Select Size</label>
+                        <div class="size-options" id="size-options">
+                            <!-- Variant buttons inserted by JS -->
+                        </div>
+                    </div>
+
+                    <div class="product-quantity">
+                        <label>Quantity</label>
+                        <div class="quantity-selector">
+                            <button class="qty-btn minus" onclick="changeQuantity(-1)">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" value="1" min="1" max="10" id="quantity-input">
+                            <button class="qty-btn plus" onclick="changeQuantity(1)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-lg add-to-cart-btn" id="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                        <button class="btn btn-secondary wishlist-btn" id="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <strong>CAS Number:</strong>
+                            <span id="product-cas">-</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Molecular Weight:</strong>
+                            <span id="product-mw">-</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Appearance:</strong>
+                            <span id="product-appearance">-</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Storage:</strong>
+                            <span id="product-storage">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="description">Description</button>
+                    <button class="tab-btn" data-tab="specifications">Specifications</button>
+                    <button class="tab-btn" data-tab="coa">COA & Documentation</button>
+                    <button class="tab-btn" data-tab="shipping">Shipping & Storage</button>
+                </div>
+
+                <div class="tab-content active" id="tab-description">
+                    <p id="product-description">Loading description...</p>
+                    <h4>Research Applications</h4>
+                    <ul class="research-apps">
+                        <li>In vitro cell culture studies</li>
+                        <li>Receptor binding assays</li>
+                        <li>Pharmacological research</li>
+                        <li>Mechanism of action studies</li>
+                    </ul>
+                </div>
+
+                <div class="tab-content" id="tab-specifications">
+                    <table class="specs-table">
+                        <tr>
+                            <td>CAS Number</td>
+                            <td id="spec-cas">-</td>
+                        </tr>
+                        <tr>
+                            <td>Sequence</td>
+                            <td id="spec-sequence">-</td>
+                        </tr>
+                        <tr>
+                            <td>Molecular Weight</td>
+                            <td id="spec-mw">-</td>
+                        </tr>
+                        <tr>
+                            <td>Purity</td>
+                            <td id="spec-purity">-</td>
+                        </tr>
+                        <tr>
+                            <td>Appearance</td>
+                            <td id="spec-appearance">-</td>
+                        </tr>
+                        <tr>
+                            <td>Solubility</td>
+                            <td id="spec-solubility">-</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tab-content" id="tab-coa">
+                    <div class="coa-info">
+                        <i class="fas fa-file-alt"></i>
+                        <div>
+                            <h4>Certificate of Analysis Available</h4>
+                            <p>Every batch is tested by independent third-party laboratories. COA documents are available for download after purchase and can be requested for verification.</p>
+                        </div>
+                    </div>
+                    <a href="coa.html" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        View COA Library
+                    </a>
+                </div>
+
+                <div class="tab-content" id="tab-shipping">
+                    <h4>Shipping Information</h4>
+                    <ul>
+                        <li>Orders placed before 2PM EST ship same business day</li>
+                        <li>Temperature-controlled packaging for peptide integrity</li>
+                        <li>Discrete plain packaging with no external branding</li>
+                        <li>International shipping available to select countries</li>
+                    </ul>
+
+                    <h4>Storage Requirements</h4>
+                    <p id="storage-info">Store at -20°C upon receipt. Protect from light and moisture. Properly stored peptides maintain stability for 24+ months.</p>
+
+                    <h4>Handling Instructions</h4>
+                    <ul>
+                        <li>Allow vial to reach room temperature before opening</li>
+                        <li>Reconstitute with sterile bacteriostatic water</li>
+                        <li>Aliquot into smaller portions to minimize freeze-thaw cycles</li>
+                        <li>Use appropriate PPE when handling research compounds</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <section class="related-products">
+                <h2>Related Products</h2>
+                <div class="products-grid" id="related-products">
+                    <!-- Related products loaded by JS -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-disclaimer">
+                    <p><strong>Disclaimer:</strong> All products are for laboratory research purposes only. Not for human consumption.</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Helivex Labs. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/product-page.js"></script>
+</body>
+</html>
