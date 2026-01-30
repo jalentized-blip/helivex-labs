@@ -13,6 +13,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Age Verification Modal -->
+    <div id="age-modal" class="modal-overlay">
+        <div class="age-modal">
+            <div class="helix-icon-modal">
+                <svg viewBox="0 0 100 100" class="helix-svg">
+                    <defs>
+                        <linearGradient id="helixGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#8B1538"/>
+                            <stop offset="50%" style="stop-color:#C41E3A"/>
+                            <stop offset="100%" style="stop-color:#DC143C"/>
+                        </linearGradient>
+                    </defs>
+                    <path class="helix-path" d="M30,10 Q50,25 70,10 Q50,35 30,50 Q50,65 70,50 Q50,75 30,90" stroke="url(#helixGradient)" fill="none" stroke-width="4"/>
+                    <path class="helix-path-2" d="M70,10 Q50,25 30,10 Q50,35 70,50 Q50,65 30,50 Q50,75 70,90" stroke="url(#helixGradient)" fill="none" stroke-width="4"/>
+                </svg>
+            </div>
+            <h2>Age Verification Required</h2>
+            <p>You must be 18 years or older to access this website. Our products are for research purposes only.</p>
+            <div class="age-buttons">
+                <button class="btn btn-primary" onclick="verifyAge(true)">I am 18 or older</button>
+                <button class="btn btn-secondary" onclick="verifyAge(false)">I am under 18</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Header (same as index) -->
     <header class="header" id="header">
         <div class="header-container">
