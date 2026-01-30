@@ -883,6 +883,12 @@ button {
     padding-top: 160px;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 180px; /* Extra clearance for mobile address bars */
+    }
+}
+
 .hero-bg {
     position: absolute;
     top: 0;
