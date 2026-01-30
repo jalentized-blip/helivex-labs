@@ -404,6 +404,50 @@ button {
     margin-top: 1px;
 }
 
+/* Dropdown Menu */
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: var(--white);
+    min-width: 220px;
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-fast);
+    z-index: var(--z-dropdown);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu a {
+    padding: var(--space-sm) var(--space-md);
+    color: var(--gray-700);
+    font-size: 0.875rem;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background: var(--gray-50);
+    color: var(--primary);
+}
+
 /* Header Actions */
 .header-actions {
     display: flex;
