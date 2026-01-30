@@ -4,12 +4,12 @@
 
 .product-page {
     padding: var(--space-xl) 0 var(--space-4xl);
-    margin-top: 120px; /* Offset for sticky header */
+    margin-top: 200px; /* Offset for sticky header */
 }
 
 @media (max-width: 768px) {
     .product-page {
-        margin-top: 100px;
+        margin-top: 180px;
     }
 }
 

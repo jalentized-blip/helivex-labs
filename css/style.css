@@ -880,12 +880,12 @@ button {
     justify-content: center;
     background: linear-gradient(135deg, var(--gray-950) 0%, var(--gray-900) 50%, var(--primary-900) 100%);
     overflow: hidden;
-    padding-top: 160px;
+    padding-top: 240px; /* Increased from 160px to 240px for extra clearance */
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: 180px; /* Extra clearance for mobile address bars */
+        padding-top: 220px; /* Increased from 180px for mobile clearance */
     }
 }
 
