@@ -66,10 +66,10 @@ function renderOrderSummary() {
 
 function updateTotals() {
     const subtotal = cart.getTotal();
-    const paymentMethod = document.querySelector('input[name="payment"]:checked')?.value || 'crypto';
+    const paymentMethod = 'crypto'; // Always crypto now
 
     // Calculate crypto discount
-    cryptoDiscount = paymentMethod === 'crypto' ? subtotal * 0.10 : 0;
+    cryptoDiscount = subtotal * 0.10;
 
     const total = subtotal - cryptoDiscount - couponDiscount + shippingCost;
 
@@ -105,29 +105,12 @@ function updateCryptoAmount(usdAmount) {
 }
 
 function initPaymentMethods() {
-    const paymentMethods = document.querySelectorAll('input[name="payment"]');
-
-    paymentMethods.forEach(method => {
-        method.addEventListener('change', () => {
-            // Update active class
-            document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('active'));
-            method.closest('.payment-method').classList.add('active');
-
-            // Show/hide payment details
-            const cryptoDetails = document.getElementById('crypto-details');
-            const cardDetails = document.getElementById('card-details');
-
-            if (method.value === 'crypto') {
-                cryptoDetails.classList.add('active');
-                cardDetails.classList.remove('active');
-            } else {
-                cryptoDetails.classList.remove('active');
-                cardDetails.classList.add('active');
-            }
-
-            updateTotals();
-        });
-    });
+    // Payment method logic simplified as only crypto is available
+    const cryptoDetails = document.getElementById('crypto-details');
+    if (cryptoDetails) {
+        cryptoDetails.classList.add('active');
+    }
+    updateTotals();
 }
 
 function initCryptoSelection() {
@@ -263,26 +246,21 @@ function processOrder() {
         document.getElementById('confirm-email').textContent = email;
 
         // Update crypto payment info
-        const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
         const cryptoModal = document.getElementById('crypto-payment-modal');
 
-        if (paymentMethod === 'crypto') {
-            cryptoModal.style.display = 'block';
-            const total = cart.getTotal() - cryptoDiscount - couponDiscount + shippingCost;
-            const rate = cryptoRates[selectedCrypto];
-            const cryptoAmount = (total * rate).toFixed(selectedCrypto === 'usdt' ? 2 : 6);
+        cryptoModal.style.display = 'block';
+        const total = cart.getTotal() - cryptoDiscount - couponDiscount + shippingCost;
+        const rate = cryptoRates[selectedCrypto];
+        const cryptoAmount = (total * rate).toFixed(selectedCrypto === 'usdt' ? 2 : 6);
 
-            document.getElementById('modal-crypto-amount').textContent = `${cryptoAmount} ${selectedCrypto.toUpperCase()}`;
-            document.getElementById('modal-address').textContent = cryptoAddresses[selectedCrypto];
+        document.getElementById('modal-crypto-amount').textContent = `${cryptoAmount} ${selectedCrypto.toUpperCase()}`;
+        document.getElementById('modal-address').textContent = cryptoAddresses[selectedCrypto];
 
-            // Generate QR Code
-            generateQRCode('modal-qr', cryptoAddresses[selectedCrypto]);
+        // Generate QR Code
+        generateQRCode('modal-qr', cryptoAddresses[selectedCrypto]);
 
-            // Start payment timer
-            startPaymentTimer();
-        } else {
-            cryptoModal.style.display = 'none';
-        }
+        // Start payment timer
+        startPaymentTimer();
 
         modal.style.display = 'flex';
 
@@ -308,7 +286,7 @@ function saveOrder(orderNumber, email) {
         cryptoDiscount,
         couponDiscount,
         total: cart.getTotal() - cryptoDiscount - couponDiscount + shippingCost,
-        paymentMethod: document.querySelector('input[name="payment"]:checked').value,
+        paymentMethod: 'crypto',
         crypto: selectedCrypto,
         status: 'pending_payment',
         date: new Date().toISOString(),
