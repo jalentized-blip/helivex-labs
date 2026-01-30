@@ -402,15 +402,83 @@ function initCounters() {
 
 /* Testimonial Slider */
 function initTestimonialSlider() {
-    const slider = document.getElementById('testimonials-slider');
+    const track = document.getElementById('testimonials-track');
     const prevBtn = document.getElementById('testimonial-prev');
     const nextBtn = document.getElementById('testimonial-next');
     const dotsContainer = document.getElementById('testimonial-dots');
 
-    if (!slider) return;
+    if (!track) return;
 
-    // For now, testimonials are displayed in a grid
-    // This could be enhanced with actual slider functionality
+    const cards = track.querySelectorAll('.testimonial-card');
+    let currentIndex = 0;
+    const cardWidth = 100 / (window.innerWidth > 1024 ? 3 : (window.innerWidth > 768 ? 2 : 1));
+
+    // Create dots
+    const dotsCount = cards.length - (window.innerWidth > 1024 ? 2 : (window.innerWidth > 768 ? 1 : 0));
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < dotsCount; i++) {
+        const dot = document.createElement('div');
+        dot.className = `dot ${i === 0 ? 'active' : ''}`;
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+
+    const dots = dotsContainer.querySelectorAll('.dot');
+
+    function updateSlider() {
+        const offset = currentIndex * -(100 / (window.innerWidth > 1024 ? 3 : (window.innerWidth > 768 ? 2 : 1)));
+        track.style.transform = `translateX(${currentIndex * -(100 / cards.length * (cards.length / (window.innerWidth > 1024 ? 3 : (window.innerWidth > 768 ? 2 : 1))))}%)`;
+        
+        // Simpler transform for now based on flex basis
+        const gap = 32; // var(--space-xl)
+        const containerWidth = track.parentElement.offsetWidth;
+        const scrollAmount = (containerWidth / (window.innerWidth > 1024 ? 3 : (window.innerWidth > 768 ? 2 : 1)));
+        
+        track.style.transform = `translateX(-${currentIndex * scrollAmount}px)`;
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function goToSlide(index) {
+        currentIndex = Math.max(0, Math.min(index, dotsCount - 1));
+        updateSlider();
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : dotsCount - 1;
+            updateSlider();
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex < dotsCount - 1) ? currentIndex + 1 : 0;
+            updateSlider();
+        });
+    }
+
+    // Auto slide
+    let autoSlide = setInterval(() => {
+        currentIndex = (currentIndex < dotsCount - 1) ? currentIndex + 1 : 0;
+        updateSlider();
+    }, 5000);
+
+    track.addEventListener('mouseenter', () => clearInterval(autoSlide));
+    track.addEventListener('mouseleave', () => {
+        autoSlide = setInterval(() => {
+            currentIndex = (currentIndex < dotsCount - 1) ? currentIndex + 1 : 0;
+            updateSlider();
+        }, 5000);
+    });
+
+    // Handle resize
+    window.addEventListener('resize', debounce(() => {
+        currentIndex = 0;
+        initTestimonialSlider(); // Re-init for new counts
+    }, 250));
 }
 
 /* Newsletter Form */

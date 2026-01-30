@@ -103,43 +103,27 @@
     <section class="shop-content">
         <div class="container">
             <div class="shop-layout">
-                <!-- Sidebar Filters -->
+                <!-- Sidebar -->
                 <aside class="shop-sidebar">
                     <div class="filter-section">
-                        <h4>Categories</h4>
-                        <ul class="category-list" id="category-list">
-                            <li><a href="?category=all" class="active" data-category="all">All Peptides</a></li>
-                            <li><a href="?category=metabolic" data-category="metabolic">Metabolic Research</a></li>
-                            <li><a href="?category=healing" data-category="healing">Tissue Repair</a></li>
-                            <li><a href="?category=cognitive" data-category="cognitive">Cognitive Research</a></li>
-                            <li><a href="?category=longevity" data-category="longevity">Longevity Studies</a></li>
-                        </ul>
+                        <h4>Research Categories</h4>
+                        <div class="category-list" id="category-list">
+                            <a href="#" class="active" data-category="all">All Compounds</a>
+                            <a href="#" data-category="metabolic">Metabolic Research</a>
+                            <a href="#" data-category="healing">Tissue Repair</a>
+                            <a href="#" data-category="cognitive">Cognitive Research</a>
+                            <a href="#" data-category="longevity">Longevity Studies</a>
+                        </div>
                     </div>
 
                     <div class="filter-section">
                         <h4>Price Range</h4>
                         <div class="price-range">
-                            <input type="range" min="0" max="500" value="500" id="price-range">
+                            <input type="range" id="price-range" min="0" max="500" value="500">
                             <div class="price-values">
                                 <span>$0</span>
                                 <span id="price-max">$500+</span>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <h4>Purity Level</h4>
-                        <div class="checkbox-group">
-                            <label class="checkbox-item">
-                                <input type="checkbox" checked>
-                                <span class="checkmark"></span>
-                                99%+ Purity
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" checked>
-                                <span class="checkmark"></span>
-                                98-99% Purity
-                            </label>
                         </div>
                     </div>
 
@@ -149,13 +133,23 @@
                             <label class="checkbox-item">
                                 <input type="checkbox" checked>
                                 <span class="checkmark"></span>
-                                In Stock Only
+                                In Stock
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                New Arrivals
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Best Sellers
                             </label>
                         </div>
                     </div>
 
-                    <button class="btn btn-secondary btn-block" id="clear-filters">
-                        Clear All Filters
+                    <button class="btn btn-outline btn-block" id="clear-filters">
+                        <i class="fas fa-redo"></i> Clear All Filters
                     </button>
                 </aside>
 
@@ -163,20 +157,23 @@
                 <main class="shop-main">
                     <div class="shop-toolbar">
                         <div class="results-count">
-                            <span id="results-count">16</span> products found
+                            Showing <span id="results-count">16</span> premium research compounds
                         </div>
                         <div class="shop-controls">
                             <div class="view-toggle">
-                                <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
-                                <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                                <button class="view-btn active" data-view="grid" title="Grid View"><i class="fas fa-th-large"></i></button>
+                                <button class="view-btn" data-view="list" title="List View"><i class="fas fa-list"></i></button>
                             </div>
-                            <select class="sort-select" id="sort-select">
-                                <option value="featured">Featured</option>
-                                <option value="price-low">Price: Low to High</option>
-                                <option value="price-high">Price: High to Low</option>
-                                <option value="name">Name: A-Z</option>
-                                <option value="newest">Newest First</option>
-                            </select>
+                            <div class="sort-wrapper">
+                                <i class="fas fa-sort-amount-down sort-icon"></i>
+                                <select class="sort-select" id="sort-select">
+                                    <option value="featured">Featured First</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="name">Name: A-Z</option>
+                                    <option value="newest">Newest Arrivals</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 

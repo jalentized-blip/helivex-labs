@@ -212,7 +212,7 @@
     padding: var(--space-md) var(--space-xl);
     background: var(--white);
     border: 2px solid var(--gray-200);
-    border-radius: var(--radius-lg);
+    border-radius: 50px;
     cursor: pointer;
     transition: all var(--transition-fast);
 }
@@ -223,7 +223,8 @@
 
 .size-btn.active {
     border-color: var(--primary);
-    background: var(--primary-50);
+    background: var(--primary);
+    color: var(--white);
 }
 
 .size-btn .size {
@@ -238,7 +239,7 @@
 }
 
 .size-btn.active .size-price {
-    color: var(--primary);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Quantity */

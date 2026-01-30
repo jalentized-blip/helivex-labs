@@ -148,11 +148,11 @@
                     <span class="stat-label">Purity Verified</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number" data-count="50">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-number" data-count="100">0</span><span class="stat-suffix">+</span>
                     <span class="stat-label">Research Compounds</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number" data-count="10000">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-number" data-count="320">0</span><span class="stat-suffix">+</span>
                     <span class="stat-label">Labs Served</span>
                 </div>
             </div>
@@ -210,13 +210,13 @@
     <!-- Featured Products -->
     <section class="featured-products section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <span class="section-tag">Featured Collection</span>
                 <h2 class="section-title">Popular Research Compounds</h2>
                 <p class="section-subtitle">Explore our most requested peptides, each backed by comprehensive documentation and rigorous testing.</p>
             </div>
 
-            <div class="product-filters">
+            <div class="product-filters reveal">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="metabolic">Metabolic</button>
                 <button class="filter-btn" data-filter="healing">Tissue Repair</button>
@@ -224,11 +224,11 @@
                 <button class="filter-btn" data-filter="longevity">Longevity</button>
             </div>
 
-            <div class="products-grid" id="products-grid">
+            <div class="products-grid reveal" id="products-grid">
                 <!-- Products will be dynamically inserted -->
             </div>
 
-            <div class="section-cta">
+            <div class="section-cta reveal">
                 <a href="shop.html" class="btn btn-primary btn-lg">
                     View All Products
                     <i class="fas fa-arrow-right"></i>
@@ -241,7 +241,7 @@
     <section class="why-us section">
         <div class="container">
             <div class="why-us-grid">
-                <div class="why-us-content">
+                <div class="why-us-content reveal-left">
                     <span class="section-tag">Why Helivex Labs</span>
                     <h2 class="section-title">The Science of Trust</h2>
                     <p class="section-text">
@@ -250,7 +250,7 @@
                     </p>
 
                     <div class="features-list">
-                        <div class="feature-item">
+                        <div class="feature-item reveal" style="transition-delay: 0.1s;">
                             <div class="feature-icon">
                                 <i class="fas fa-microscope"></i>
                             </div>
@@ -259,7 +259,7 @@
                                 <p>Every batch tested by independent ISO-certified laboratories with full documentation available.</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item reveal" style="transition-delay: 0.2s;">
                             <div class="feature-icon">
                                 <i class="fas fa-temperature-low"></i>
                             </div>
@@ -268,7 +268,7 @@
                                 <p>Temperature-controlled storage and shipping ensures compound integrity from synthesis to delivery.</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item reveal" style="transition-delay: 0.3s;">
                             <div class="feature-icon">
                                 <i class="fas fa-shield-alt"></i>
                             </div>
@@ -277,7 +277,7 @@
                                 <p>Plain packaging with no external branding. Your research remains confidential.</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item reveal" style="transition-delay: 0.4s;">
                             <div class="feature-icon">
                                 <i class="fas fa-headset"></i>
                             </div>
@@ -288,31 +288,116 @@
                         </div>
                     </div>
                 </div>
-                <div class="why-us-visual">
+                <div class="why-us-visual reveal-right">
                     <div class="visual-card">
                         <div class="card-glow"></div>
                         <div class="molecule-animation">
                             <svg viewBox="0 0 200 200" class="molecule-svg">
-                                <circle cx="100" cy="50" r="8" class="atom atom-1"/>
-                                <circle cx="60" cy="100" r="8" class="atom atom-2"/>
-                                <circle cx="140" cy="100" r="8" class="atom atom-3"/>
-                                <circle cx="80" cy="150" r="8" class="atom atom-4"/>
-                                <circle cx="120" cy="150" r="8" class="atom atom-5"/>
-                                <line x1="100" y1="50" x2="60" y2="100" class="bond"/>
-                                <line x1="100" y1="50" x2="140" y2="100" class="bond"/>
-                                <line x1="60" y1="100" x2="80" y2="150" class="bond"/>
-                                <line x1="140" y1="100" x2="120" y2="150" class="bond"/>
-                                <line x1="80" y1="150" x2="120" y2="150" class="bond"/>
+                                <path d="M100 40 L160 85 L140 155 L60 155 L40 85 Z" fill="none" stroke="var(--primary)" stroke-width="3" class="pentagon-path"/>
+                                <circle cx="100" cy="40" r="8" class="atom atom-1"/>
+                                <circle cx="160" cy="85" r="8" class="atom atom-2"/>
+                                <circle cx="140" cy="155" r="8" class="atom atom-3"/>
+                                <circle cx="60" cy="155" r="8" class="atom atom-4"/>
+                                <circle cx="40" cy="85" r="8" class="atom atom-5"/>
+                                <line x1="100" y1="40" x2="160" y2="85" class="bond"/>
+                                <line x1="160" y1="85" x2="140" y2="155" class="bond"/>
+                                <line x1="140" y1="155" x2="60" y2="155" class="bond"/>
+                                <line x1="60" y1="155" x2="40" y2="85" class="bond"/>
+                                <line x1="40" y1="85" x2="100" y2="40" class="bond"/>
                             </svg>
                         </div>
-                        <div class="purity-meter">
-                            <div class="meter-label">Purity Level</div>
-                            <div class="meter-bar">
-                                <div class="meter-fill" style="--fill: 99%;"></div>
+                        <div class="purity-card-inner">
+                            <div class="purity-header">
+                                <span class="purity-label">Purity Level</span>
                             </div>
-                            <div class="meter-value">99.2%</div>
+                            <div class="purity-progress-wrap">
+                                <div class="purity-progress-bar">
+                                    <div class="purity-progress-fill" style="width: 99.2%;"></div>
+                                </div>
+                                <div class="purity-value-display">99.2%</div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section bg-light" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal-left">
+                    <div class="image-stack">
+                        <img src="images/lab-1.jpg" alt="Laboratory Research" class="img-main">
+                        <div class="image-accent">
+                            <i class="fas fa-microscope"></i>
+                            <span>Est. 2020</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <span class="section-tag">About Helivex Labs</span>
+                    <h2 class="section-title">Committed to Scientific Progress</h2>
+                    <p class="section-text">
+                        Founded by a team of dedicated biochemists, Helivex Labs was born from a simple mission: to provide the scientific community with research peptides of unparalleled purity and consistency.
+                    </p>
+                    <p class="section-text">
+                        We believe that the quality of your research shouldn't be limited by the quality of your materials. That's why we've invested in state-of-the-art synthesis and purification technologies to ensure every vial meets our rigorous 99%+ purity standard.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <span class="stat-val">99%+</span>
+                            <span class="stat-txt">Purity Standard</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-val">24/7</span>
+                            <span class="stat-txt">Support</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-outline">Learn More Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Quality Section -->
+    <section class="research-quality section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Quality Assurance</span>
+                <h2 class="section-title">The Gold Standard of Verification</h2>
+                <p class="section-subtitle">Transparency is the core of our operation. We provide complete documentation for every compound we synthesize.</p>
+            </div>
+
+            <div class="quality-grid">
+                <div class="quality-card reveal" style="transition-delay: 0.1s;">
+                    <div class="quality-icon"><i class="fas fa-dna"></i></div>
+                    <h3>HPLC Analysis</h3>
+                    <p>High-Performance Liquid Chromatography ensures the identity and purity of every peptide sequence.</p>
+                </div>
+                <div class="quality-card reveal" style="transition-delay: 0.2s;">
+                    <div class="quality-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Mass Spec</h3>
+                    <p>Mass Spectrometry verification confirms the exact molecular weight and composition of each batch.</p>
+                </div>
+                <div class="quality-card reveal" style="transition-delay: 0.3s;">
+                    <div class="quality-icon"><i class="fas fa-file-medical-alt"></i></div>
+                    <h3>Full COA Access</h3>
+                    <p>Every order comes with a batch-specific Certificate of Analysis from independent third-party labs.</p>
+                </div>
+            </div>
+
+            <div class="coa-cta reveal">
+                <div class="coa-box">
+                    <div class="coa-text">
+                        <h4>Verify Your Batch</h4>
+                        <p>Enter your batch number to view detailed analysis reports.</p>
+                    </div>
+                    <form class="coa-search">
+                        <input type="text" placeholder="Batch Number (e.g. HX-2024-001)">
+                        <button type="submit" class="btn btn-primary">Verify COA</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -321,39 +406,39 @@
     <!-- Categories Section -->
     <section class="categories section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Research Areas</span>
+            <div class="section-header reveal">
+                <span class="section-tag">RESEARCH AREAS</span>
                 <h2 class="section-title">Explore by Category</h2>
             </div>
 
             <div class="categories-grid">
-                <a href="shop.html?category=metabolic" class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-fire-alt"></i>
+                <a href="shop.html?category=metabolic" class="category-card reveal" style="transition-delay: 0.1s;">
+                    <div class="category-icon-box">
+                        <i class="fas fa-fire"></i>
                     </div>
                     <h3>Metabolic Research</h3>
                     <p>GLP-1 agonists, insulin sensitizers, and metabolic modulators</p>
                     <span class="category-link">Explore <i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="shop.html?category=healing" class="category-card">
-                    <div class="category-icon">
+                <a href="shop.html?category=healing" class="category-card reveal" style="transition-delay: 0.2s;">
+                    <div class="category-icon-box">
                         <i class="fas fa-band-aid"></i>
                     </div>
                     <h3>Tissue Repair</h3>
                     <p>Growth factors, healing peptides, and regenerative compounds</p>
                     <span class="category-link">Explore <i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="shop.html?category=cognitive" class="category-card">
-                    <div class="category-icon">
+                <a href="shop.html?category=cognitive" class="category-card reveal" style="transition-delay: 0.3s;">
+                    <div class="category-icon-box">
                         <i class="fas fa-brain"></i>
                     </div>
                     <h3>Cognitive Research</h3>
                     <p>Nootropic peptides, neuroprotective agents, and cognitive enhancers</p>
                     <span class="category-link">Explore <i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="shop.html?category=longevity" class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-hourglass-half"></i>
+                <a href="shop.html?category=longevity" class="category-card reveal" style="transition-delay: 0.4s;">
+                    <div class="category-icon-box">
+                        <i class="fas fa-hourglass"></i>
                     </div>
                     <h3>Longevity Studies</h3>
                     <p>NAD+ precursors, telomere research, and anti-aging compounds</p>
@@ -366,69 +451,72 @@
     <!-- Testimonials -->
     <section class="testimonials section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <span class="section-tag">Trusted Worldwide</span>
                 <h2 class="section-title">What Researchers Say</h2>
+                <p class="section-subtitle">Join thousands of laboratories and researchers who rely on Helivex Labs for their critical study compounds.</p>
             </div>
 
-            <div class="testimonials-slider" id="testimonials-slider">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+            <div class="testimonials-container reveal">
+                <div class="testimonials-track" id="testimonials-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The consistency and purity of Helivex products have significantly improved our research outcomes. Their COA documentation is thorough and reliable."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">DR</div>
+                            <div class="author-info">
+                                <span class="author-name">Dr. R. Mitchell</span>
+                                <span class="author-role">Research Director, BioTech Institute</span>
+                            </div>
+                        </div>
                     </div>
-                    <p class="testimonial-text">"The consistency and purity of Helivex products have significantly improved our research outcomes. Their COA documentation is thorough and reliable."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">DR</div>
-                        <div class="author-info">
-                            <span class="author-name">Dr. R. Mitchell</span>
-                            <span class="author-role">Research Director, BioTech Institute</span>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Fast shipping and excellent customer service. The crypto payment option makes procurement seamless for our international lab."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SK</div>
+                            <div class="author-info">
+                                <span class="author-name">Dr. S. Keller</span>
+                                <span class="author-role">Lead Scientist, Nordic Research Labs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"We've tested multiple suppliers. Helivex consistently delivers the highest purity compounds with complete transparency."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JL</div>
+                            <div class="author-info">
+                                <span class="author-name">Prof. J. Liu</span>
+                                <span class="author-role">Department Head, Pacific Research University</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Fast shipping and excellent customer service. The crypto payment option makes procurement seamless for our international lab."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SK</div>
-                        <div class="author-info">
-                            <span class="author-name">Dr. S. Keller</span>
-                            <span class="author-role">Lead Scientist, Nordic Research Labs</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"We've tested multiple suppliers. Helivex consistently delivers the highest purity compounds with complete transparency in their testing methodology."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JL</div>
-                        <div class="author-info">
-                            <span class="author-name">Prof. J. Liu</span>
-                            <span class="author-role">Department Head, Pacific Research University</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="slider-controls">
-                <button class="slider-btn prev" id="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
-                <div class="slider-dots" id="testimonial-dots"></div>
-                <button class="slider-btn next" id="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-controls">
+                    <button class="slider-btn prev" id="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots" id="testimonial-dots"></div>
+                    <button class="slider-btn next" id="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
         </div>
     </section>
