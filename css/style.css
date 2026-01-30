@@ -821,7 +821,7 @@ ul, ol {
     justify-content: center;
     background: linear-gradient(135deg, var(--gray-950) 0%, var(--gray-900) 50%, var(--primary-900) 100%);
     overflow: hidden;
-    padding-top: 80px;
+    padding-top: 240px;
 }
 
 .hero-bg {
