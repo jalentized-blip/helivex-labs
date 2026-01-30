@@ -423,7 +423,7 @@ button {
     visibility: hidden;
     transition: all var(--transition-fast);
     z-index: var(--z-dropdown);
-    display: flex;
+    display: none; /* Changed from flex to none to force hide */
     flex-direction: column;
     gap: 2px;
 }
@@ -431,6 +431,7 @@ button {
 .nav-dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
+    display: flex; /* Show on hover */
     transform: translateX(-50%) translateY(0);
 }
 
