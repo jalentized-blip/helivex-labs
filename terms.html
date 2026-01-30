@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Helivex Labs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 50 50" class="logo-helix">
+                        <path d="M15,5 Q25,12 35,5 Q25,20 15,25 Q25,30 35,25 Q25,38 15,45" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                        <path d="M35,5 Q25,12 15,5 Q25,20 35,25 Q25,30 15,25 Q25,38 35,45" stroke="currentColor" fill="none" stroke-width="2.5"/>
+                    </svg>
+                </div>
+                <span class="logo-text">HELIVEX<span class="logo-accent">LABS</span></span>
+            </a>
+
+            <nav class="nav-main" id="nav-main">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="coa.html" class="nav-link">COA Library</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="dashboard.html" class="account-link" aria-label="Account">
+                    <i class="fas fa-user"></i>
+                </a>
+                <button class="cart-toggle" id="cart-toggle" aria-label="Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" id="cart-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+        </div>
+    </aside>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Please read these terms carefully before purchasing or using our products.</p>
+        </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="policy-content section">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            
+            <div class="policy-block" style="margin-bottom: 40px;">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing this website, purchasing products, or using any services provided by Helivex Labs ("Company," "we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services.</p>
+            </div>
+
+            <div class="policy-block" style="margin-bottom: 40px;">
+                <h2>2. Research Use Only (RUO)</h2>
+                <p><strong>ALL PRODUCTS SOLD ON THIS SITE ARE FOR LABORATORY RESEARCH PURPOSES ONLY.</strong></p>
+                <p>Helivex Labs products are strictly intended for in-vitro laboratory research and are not approved by the FDA for human or veterinary use. They are NOT intended for use as food additives, drugs, cosmetics, household chemicals, or other inappropriate applications.</p>
+                <p>By purchasing these products, you acknowledge and represent that:</p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 20px; color: var(--gray-600);">
+                    <li>You are at least 21 years of age.</li>
+                    <li>You are a qualified researcher or representative of a research institution.</li>
+                    <li>You understand the potential hazards associated with handling these chemicals.</li>
+                    <li>You will not use these products for human consumption or administration.</li>
+                </ul>
+                <p>We reserve the right to deny sales to anyone we believe intends to misuse our products. Any communication suggesting human use will result in immediate termination of service and a permanent ban.</p>
+            </div>
+
+            <div class="policy-block" style="margin-bottom: 40px;">
+                <h2>3. Compliance with Laws</h2>
+                <p>It is the responsibility of the purchaser to understand and comply with all local, state, and federal laws and regulations regarding the purchase, possession, and use of these products in their jurisdiction.</p>
+                <p>Helivex Labs makes no claims that the products available on this site are legal for purchase or possession in your specific location. You assume full liability for compliance with your local laws.</p>
+            </div>
+
+            <div class="policy-block" style="margin-bottom: 40px;">
+                <h2>4. Disclaimer of Warranties</h2>
+                <p>All materials are sold "as is" without warranty of any kind, either express or implied, including but not limited to the implied warranties of merchantability or fitness for a particular purpose.</p>
+                <p>While we strive to provide accurate product information, including purity and composition (verified by COA), we do not warrant that product descriptions or other content on this site is accurate, complete, reliable, current, or error-free.</p>
+            </div>
+
+            <div class="policy-block" style="margin-bottom: 40px;">
+                <h2>5. Limitation of Liability</h2>
+                <p>In no event shall Helivex Labs, its directors, officers, employees, or agents be liable for any direct, indirect, special, incidental, consequential, or punitive damages arising out of or related to your use of the site or the products purchased.</p>
+                <p>You agree to indemnify and hold harmless Helivex Labs from any claims, damages, losses, or expenses (including legal fees) resulting from your purchase, handling, use, or misuse of our products.</p>
+            </div>
+
+            <div class="policy-block" style="margin-bottom: 40px;">
+                <h2>6. Payment and Pricing</h2>
+                <p>Prices for our products are subject to change without notice. We reserve the right to modify or discontinue any product or service without notice at any time.</p>
+                <p>We accept cryptocurrency payments. By using this payment method, you acknowledge that crypto transactions are generally irreversible. Refunds, if applicable under our policy, may be processed in store credit or the original cryptocurrency amount at the time of the refund, at our discretion.</p>
+            </div>
+
+            <div class="policy-block" style="margin-bottom: 40px;">
+                <h2>7. Shipping and Returns</h2>
+                <p>Our shipping and returns policies are outlined in detail on our <a href="returns.html">Returns Policy</a> page. By placing an order, you agree to the terms specified therein.</p>
+                <p><strong>Note:</strong> Due to the nature of our products, we generally do not accept returns. All sales are final unless a product is proven to be defective or damaged upon arrival.</p>
+            </div>
+
+            <div class="policy-block" style="margin-bottom: 40px;">
+                <h2>8. Changes to Terms</h2>
+                <p>We reserve the right, at our sole discretion, to update, change, or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes.</p>
+            </div>
+
+            <div class="policy-block">
+                <h2>9. Contact Information</h2>
+                <p>Questions about the Terms of Service should be sent to us via our <a href="contact.html">Contact Page</a>.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-disclaimer">
+                    <p><strong>Disclaimer:</strong> All products are for laboratory research purposes only. Not for human consumption.</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Helivex Labs. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
