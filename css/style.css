@@ -343,7 +343,7 @@ button {
     display: block;
     object-fit: contain;
     position: absolute;
-    top: 20px;
+    top: 10px;
     z-index: 201;
 }
 
