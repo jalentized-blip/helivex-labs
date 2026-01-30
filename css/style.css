@@ -1328,22 +1328,29 @@ button {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-.peptide-path {
+.vial-body, .vial-neck {
     filter: drop-shadow(0 0 5px var(--primary));
-    opacity: 0.3;
+    opacity: 0.8;
+}
+
+.vial-cap {
+    filter: drop-shadow(0 0 3px var(--primary));
+}
+
+.liquid-line {
+    opacity: 0.4;
+    animation: liquidMove 4s ease-in-out infinite;
+}
+
+@keyframes liquidMove {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
 }
 
 .atom-sub { animation-delay: 2.5s; }
-.atom-6 { animation-delay: 0.2s; }
-.atom-7 { animation-delay: 0.4s; }
-.atom-8 { animation-delay: 0.6s; }
-.atom-9 { animation-delay: 0.8s; }
-.atom-10 { animation-delay: 1.0s; }
-.atom-11 { animation-delay: 1.2s; }
-.atom-12 { animation-delay: 1.4s; }
-.atom-13 { animation-delay: 1.6s; }
-.atom-14 { animation-delay: 1.8s; }
-.atom-15 { animation-delay: 2.0s; }
+.atom-1 { animation-delay: 0s; }
+.atom-2 { animation-delay: 1s; }
+.atom-3 { animation-delay: 2s; }
 
 /* Categories Grid Enhancements */
 .categories-grid {
