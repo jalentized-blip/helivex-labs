@@ -336,12 +336,12 @@ button {
 }
 
 .logo-image {
-    height: 120px;
+    height: 100px;
     width: auto;
     display: block;
     object-fit: contain;
     position: absolute;
-    top: 10px;
+    top: 20px;
     z-index: 201;
 }
 
