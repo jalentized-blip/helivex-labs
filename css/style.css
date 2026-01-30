@@ -1328,10 +1328,17 @@ button {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-.pentagon-path {
+.peptide-path {
     filter: drop-shadow(0 0 5px var(--primary));
     opacity: 0.3;
 }
+
+.atom-sub { animation-delay: 2.5s; }
+.atom-6 { animation-delay: 0.2s; }
+.atom-7 { animation-delay: 0.7s; }
+.atom-8 { animation-delay: 1.2s; }
+.atom-9 { animation-delay: 1.7s; }
+.atom-10 { animation-delay: 2.2s; }
 
 /* Categories Grid Enhancements */
 .categories-grid {

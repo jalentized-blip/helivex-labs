@@ -293,17 +293,28 @@
                         <div class="card-glow"></div>
                         <div class="molecule-animation">
                             <svg viewBox="0 0 200 200" class="molecule-svg">
-                                <path d="M100 40 L160 85 L140 155 L60 155 L40 85 Z" fill="none" stroke="var(--primary)" stroke-width="3" class="pentagon-path"/>
-                                <circle cx="100" cy="40" r="8" class="atom atom-1"/>
-                                <circle cx="160" cy="85" r="8" class="atom atom-2"/>
-                                <circle cx="140" cy="155" r="8" class="atom atom-3"/>
-                                <circle cx="60" cy="155" r="8" class="atom atom-4"/>
-                                <circle cx="40" cy="85" r="8" class="atom atom-5"/>
-                                <line x1="100" y1="40" x2="160" y2="85" class="bond"/>
-                                <line x1="160" y1="85" x2="140" y2="155" class="bond"/>
-                                <line x1="140" y1="155" x2="60" y2="155" class="bond"/>
-                                <line x1="60" y1="155" x2="40" y2="85" class="bond"/>
-                                <line x1="40" y1="85" x2="100" y2="40" class="bond"/>
+                                <!-- Main Peptide Backbone (Tirzepatide stylized) -->
+                                <path d="M40 160 C 40 120, 80 120, 80 80 C 80 40, 120 40, 120 80 C 120 120, 160 120, 160 80" 
+                                      fill="none" stroke="var(--primary)" stroke-width="3" class="peptide-path"/>
+                                
+                                <!-- Amino Acid Nodes -->
+                                <circle cx="40" cy="160" r="6" class="atom atom-1"/>
+                                <circle cx="60" cy="140" r="5" class="atom atom-2"/>
+                                <circle cx="80" cy="120" r="6" class="atom atom-3"/>
+                                <circle cx="80" cy="80" r="6" class="atom atom-4"/>
+                                <circle cx="100" cy="60" r="5" class="atom atom-5"/>
+                                <circle cx="120" cy="40" r="6" class="atom atom-6"/>
+                                <circle cx="120" cy="80" r="6" class="atom atom-7"/>
+                                <circle cx="140" cy="100" r="5" class="atom atom-8"/>
+                                <circle cx="160" cy="120" r="6" class="atom atom-9"/>
+                                <circle cx="160" cy="80" r="6" class="atom atom-10"/>
+
+                                <!-- Side Chain connections -->
+                                <line x1="80" y1="80" x2="60" y2="60" class="bond"/>
+                                <circle cx="60" cy="60" r="4" class="atom atom-sub"/>
+                                
+                                <line x1="120" y1="40" x2="140" y2="20" class="bond"/>
+                                <circle cx="140" cy="20" r="4" class="atom atom-sub"/>
                             </svg>
                         </div>
                         <div class="purity-card-inner">
