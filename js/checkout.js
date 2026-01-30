@@ -275,6 +275,9 @@ function processOrder() {
             document.getElementById('modal-crypto-amount').textContent = `${cryptoAmount} ${selectedCrypto.toUpperCase()}`;
             document.getElementById('modal-address').textContent = cryptoAddresses[selectedCrypto];
 
+            // Generate QR Code
+            generateQRCode('modal-qr', cryptoAddresses[selectedCrypto]);
+
             // Start payment timer
             startPaymentTimer();
         } else {
@@ -421,4 +424,27 @@ function showNotification(message, type = 'info') {
         notification.style.transform = 'translateX(-50%) translateY(100px)';
         setTimeout(() => notification.remove(), 300);
     }, 3000);
+}
+
+function generateQRCode(elementId, text) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+
+    // Clear existing content (including placeholder SVG)
+    element.innerHTML = '';
+
+    // Generate new QR code
+    try {
+        new QRCode(element, {
+            text: text,
+            width: 200,
+            height: 200,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    } catch (e) {
+        console.error('QR Code generation failed:', e);
+        element.innerHTML = '<p class="error">Failed to generate QR code</p>';
+    }
 }
