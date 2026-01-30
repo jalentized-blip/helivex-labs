@@ -1337,20 +1337,35 @@ button {
     filter: drop-shadow(0 0 3px var(--primary));
 }
 
-.liquid-line {
-    opacity: 0.4;
-    animation: liquidMove 4s ease-in-out infinite;
+.powder-cake {
+    filter: blur(1px);
+    animation: powderShake 3s ease-in-out infinite;
 }
 
-@keyframes liquidMove {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(5px); }
+.grain {
+    fill: var(--primary);
+    opacity: 0.6;
+    animation: grainShake 2s ease-in-out infinite;
 }
 
-.atom-sub { animation-delay: 2.5s; }
-.atom-1 { animation-delay: 0s; }
-.atom-2 { animation-delay: 1s; }
-.atom-3 { animation-delay: 2s; }
+@keyframes powderShake {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-1px, 1px) rotate(-0.5deg); }
+    50% { transform: translate(1px, -1px) rotate(0.5deg); }
+    75% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+}
+
+@keyframes grainShake {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(2px, -2px); }
+    66% { transform: translate(-2px, 1px); }
+}
+
+.grain-1 { animation-delay: 0.1s; }
+.grain-2 { animation-delay: 0.3s; }
+.grain-3 { animation-delay: 0.5s; }
+.grain-4 { animation-delay: 0.7s; }
+.grain-5 { animation-delay: 0.9s; }
 
 /* Categories Grid Enhancements */
 .categories-grid {
