@@ -293,28 +293,33 @@
                         <div class="card-glow"></div>
                         <div class="molecule-animation">
                             <svg viewBox="0 0 200 200" class="molecule-svg">
-                                <!-- Main Peptide Backbone (Tirzepatide stylized) -->
-                                <path d="M40 160 C 40 120, 80 120, 80 80 C 80 40, 120 40, 120 80 C 120 120, 160 120, 160 80" 
+                                <!-- Main Peptide Backbone (BPC-157 stylized - 15 Amino Acids) -->
+                                <path d="M30 170 C 30 130, 70 150, 70 110 C 70 70, 30 90, 30 50 C 30 10, 80 30, 100 70 C 120 110, 170 90, 170 130 C 170 170, 130 150, 130 110 C 130 70, 170 50, 170 30" 
                                       fill="none" stroke="var(--primary)" stroke-width="3" class="peptide-path"/>
                                 
-                                <!-- Amino Acid Nodes -->
-                                <circle cx="40" cy="160" r="6" class="atom atom-1"/>
-                                <circle cx="60" cy="140" r="5" class="atom atom-2"/>
-                                <circle cx="80" cy="120" r="6" class="atom atom-3"/>
-                                <circle cx="80" cy="80" r="6" class="atom atom-4"/>
-                                <circle cx="100" cy="60" r="5" class="atom atom-5"/>
-                                <circle cx="120" cy="40" r="6" class="atom atom-6"/>
-                                <circle cx="120" cy="80" r="6" class="atom atom-7"/>
-                                <circle cx="140" cy="100" r="5" class="atom atom-8"/>
-                                <circle cx="160" cy="120" r="6" class="atom atom-9"/>
-                                <circle cx="160" cy="80" r="6" class="atom atom-10"/>
+                                <!-- Amino Acid Nodes (15 nodes for BPC-157) -->
+                                <circle cx="30" cy="170" r="5" class="atom atom-1"/>
+                                <circle cx="50" cy="155" r="4" class="atom atom-2"/>
+                                <circle cx="70" cy="110" r="5" class="atom atom-3"/>
+                                <circle cx="50" cy="95" r="4" class="atom atom-4"/>
+                                <circle cx="30" cy="50" r="5" class="atom atom-5"/>
+                                <circle cx="65" cy="35" r="4" class="atom atom-6"/>
+                                <circle cx="100" cy="70" r="5" class="atom atom-7"/>
+                                <circle cx="115" cy="95" r="4" class="atom atom-8"/>
+                                <circle cx="140" cy="105" r="5" class="atom atom-9"/>
+                                <circle cx="170" cy="130" r="5" class="atom atom-10"/>
+                                <circle cx="150" cy="145" r="4" class="atom atom-11"/>
+                                <circle cx="130" cy="110" r="5" class="atom atom-12"/>
+                                <circle cx="140" cy="85" r="4" class="atom atom-13"/>
+                                <circle cx="170" cy="50" r="5" class="atom atom-14"/>
+                                <circle cx="170" cy="30" r="5" class="atom atom-15"/>
 
-                                <!-- Side Chain connections -->
-                                <line x1="80" y1="80" x2="60" y2="60" class="bond"/>
-                                <circle cx="60" cy="60" r="4" class="atom atom-sub"/>
+                                <!-- Stylized side connections -->
+                                <line x1="70" y1="110" x2="90" y2="120" class="bond"/>
+                                <circle cx="90" cy="120" r="3" class="atom atom-sub"/>
                                 
-                                <line x1="120" y1="40" x2="140" y2="20" class="bond"/>
-                                <circle cx="140" cy="20" r="4" class="atom atom-sub"/>
+                                <line x1="130" y1="110" x2="110" y2="120" class="bond"/>
+                                <circle cx="110" cy="120" r="3" class="atom atom-sub"/>
                             </svg>
                         </div>
                         <div class="purity-card-inner">

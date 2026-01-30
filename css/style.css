@@ -1335,10 +1335,15 @@ button {
 
 .atom-sub { animation-delay: 2.5s; }
 .atom-6 { animation-delay: 0.2s; }
-.atom-7 { animation-delay: 0.7s; }
-.atom-8 { animation-delay: 1.2s; }
-.atom-9 { animation-delay: 1.7s; }
-.atom-10 { animation-delay: 2.2s; }
+.atom-7 { animation-delay: 0.4s; }
+.atom-8 { animation-delay: 0.6s; }
+.atom-9 { animation-delay: 0.8s; }
+.atom-10 { animation-delay: 1.0s; }
+.atom-11 { animation-delay: 1.2s; }
+.atom-12 { animation-delay: 1.4s; }
+.atom-13 { animation-delay: 1.6s; }
+.atom-14 { animation-delay: 1.8s; }
+.atom-15 { animation-delay: 2.0s; }
 
 /* Categories Grid Enhancements */
 .categories-grid {
