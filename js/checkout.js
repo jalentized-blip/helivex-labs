@@ -52,7 +52,7 @@ function renderOrderSummary() {
     container.innerHTML = items.map(item => `
         <div class="summary-item">
             <div class="item-image">
-                <i class="fas fa-flask"></i>
+                <img src="images/product-vial.jpg" alt="${item.name}" class="summary-img">
                 <span class="item-quantity">${item.quantity}</span>
             </div>
             <div class="item-details">

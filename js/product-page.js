@@ -54,6 +54,13 @@ function renderProduct() {
         <span>${currentProduct.purity} Verified Purity</span>
     `;
 
+    // Update Image
+    const mainImg = document.getElementById('main-product-image');
+    if (mainImg) {
+        mainImg.src = 'images/product-vial.jpg';
+        mainImg.alt = currentProduct.name;
+    }
+
     // Description
     document.getElementById('product-description').textContent = currentProduct.description;
 

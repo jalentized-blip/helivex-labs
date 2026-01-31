@@ -190,7 +190,7 @@ function renderProducts(productList, container) {
         return `
             <div class="product-card stagger-item" data-category="${product.category}" style="animation-delay: ${index * 0.1}s">
                 <div class="product-image">
-                    <i class="fas fa-flask peptide-icon"></i>
+                    <img src="images/product-vial.jpg" alt="${product.name}" class="product-img">
                     ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
                     <div class="product-actions">
                         <button class="action-btn" onclick="quickView(${product.id})" title="Quick View">

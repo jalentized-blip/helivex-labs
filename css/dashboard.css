@@ -482,6 +482,13 @@
     background: var(--gray-100);
     border-radius: var(--radius-md);
     color: var(--primary);
+    overflow: hidden; /* Added to clip image */
+}
+
+.product-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .product-details {
@@ -545,6 +552,7 @@
     background: var(--gray-100);
     color: var(--primary);
     font-size: 3rem;
+    overflow: hidden;
 }
 
 .wishlist-item-info {

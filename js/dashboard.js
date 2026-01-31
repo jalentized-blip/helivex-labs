@@ -166,7 +166,7 @@ function renderOrdersList(orders) {
                     ${order.items.map(item => `
                         <div class="order-product">
                             <div class="product-thumb">
-                                <i class="fas fa-flask"></i>
+                                <img src="images/product-vial.jpg" alt="${item.name}" class="product-thumb-img">
                             </div>
                             <div class="product-details">
                                 <h4>${item.name}</h4>
@@ -221,7 +221,7 @@ function initWishlist() {
         return `
             <div class="wishlist-item">
                 <div class="wishlist-item-image">
-                    <i class="fas fa-flask"></i>
+                    <img src="images/product-vial.jpg" alt="${product.name}" class="product-thumb-img">
                 </div>
                 <div class="wishlist-item-info">
                     <h4>${product.name}</h4>
