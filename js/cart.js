@@ -266,7 +266,7 @@ function renderCartSidebar() {
         cartItems.innerHTML = cart.getItems().map(item => `
             <div class="cart-item" data-id="${item.id}">
                 <div class="cart-item-image">
-                    <img src="images/product-vial.jpg" alt="${item.name}" class="cart-img">
+                    <i class="fas fa-vial"></i>
                 </div>
                 <div class="cart-item-details">
                     <div class="cart-item-name">${item.name}</div>

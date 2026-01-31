@@ -183,14 +183,20 @@ function initProductsGrid() {
 function renderProducts(productList, container) {
     if (!container) return;
 
+    const isShopPage = window.location.pathname.includes('shop.html');
+
     container.innerHTML = productList.map((product, index) => {
         const variant = product.variants[0];
-        const discount = Math.round((1 - variant.price / variant.originalPrice) * 100);
+        const isShopPage = window.location.pathname.includes('shop.html');
+
+        const productImage = isShopPage 
+            ? `<img src="images/product-vial.jpg" alt="${product.name}" class="product-img" onerror="this.parentElement.innerHTML='<div class=\'product-icon-placeholder\'><i class=\'fas fa-vial\'></i></div>'">`
+            : `<div class="product-icon-placeholder"><i class="fas fa-vial"></i></div>`;
 
         return `
             <div class="product-card stagger-item" data-category="${product.category}" style="animation-delay: ${index * 0.1}s">
                 <div class="product-image">
-                    <img src="images/product-vial.jpg" alt="${product.name}" class="product-img">
+                    ${productImage}
                     ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
                     <div class="product-actions">
                         <button class="action-btn" onclick="quickView(${product.id})" title="Quick View">

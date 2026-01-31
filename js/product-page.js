@@ -54,11 +54,11 @@ function renderProduct() {
         <span>${currentProduct.purity} Verified Purity</span>
     `;
 
-    // Update Image
-    const mainImg = document.getElementById('main-product-image');
-    if (mainImg) {
-        mainImg.src = 'images/product-vial.jpg';
-        mainImg.alt = currentProduct.name;
+    // Image handling - We keep the default icon for the product page 
+    // as per user request to only show photo on shop.html
+    const imageContainer = document.getElementById('product-image-container');
+    if (imageContainer && currentProduct.image) {
+        // If we ever want to support specific product images here
     }
 
     // Description
