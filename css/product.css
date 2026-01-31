@@ -112,8 +112,9 @@
     color: var(--gray-700);
 }
 
-.feature-badge i {
-    color: var(--primary);
+.feature-badge i,
+.coa-info i {
+    display: none;
 }
 
 /* Product Details */

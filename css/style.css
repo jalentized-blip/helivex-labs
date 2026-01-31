@@ -879,7 +879,9 @@ button {
 }
 
 .trust-icon-img,
-.accent-icon-img {
+.accent-icon-img,
+.intro-icon-img,
+.coa-icon-img {
     width: 48px;
     height: 48px;
     border-radius: var(--radius-md);
@@ -892,29 +894,26 @@ button {
 }
 
 .trust-icon-img img,
-.accent-icon-img img {
+.accent-icon-img img,
+.intro-icon-img img,
+.coa-icon-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .feature-icon .trust-icon-img,
-.standard-icon .trust-icon-img {
+.standard-icon .trust-icon-img,
+.intro-icon-img {
     width: 60px;
     height: 60px;
     margin: 0 auto;
 }
 
-.image-accent .accent-icon-img {
-    width: 40px;
-    height: 40px;
-    border-radius: var(--radius-sm);
-}
-
-.quality-icon .trust-icon-img {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto var(--space-md);
+.coa-icon-img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: var(--space-md);
 }
 
 /* Hero Section */

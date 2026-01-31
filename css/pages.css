@@ -168,17 +168,9 @@
     box-shadow: var(--shadow-sm);
 }
 
-.intro-icon {
-    width: 56px;
-    height: 56px;
-    min-width: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--primary-50), var(--primary-100));
-    border-radius: var(--radius-lg);
-    color: var(--primary);
-    font-size: 1.25rem;
+.intro-icon,
+.coa-icon {
+    display: none;
 }
 
 .intro-content h3 {

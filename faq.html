@@ -319,7 +319,7 @@
                         <li><a href="shop.html">Peptides</a></li>
                         <li><a href="coa.html">Quality Control</a></li>
                         <li><a href="faq.html">Common Questions</a></li>
-                        <li><a href="shipping.html">Shipping Policy</a></li>
+                        <li><a href="faq.html?category=shipping">Shipping Policy</a></li>
                     </ul>
                 </div>
 
@@ -357,7 +357,7 @@
                     <div class="legal-links">
                         <a href="privacy.html">Privacy</a>
                         <a href="terms.html">Terms</a>
-                        <a href="shipping.html">Shipping</a>
+                        <a href="faq.html?category=shipping">Shipping</a>
                     </div>
                 </div>
             </div>
@@ -390,24 +390,38 @@
         });
 
         // FAQ Categories
+        const filterCategory = (category) => {
+            // Update active button
+            document.querySelectorAll('.faq-cat-btn').forEach(b => {
+                if (b.dataset.category === category) {
+                    b.classList.add('active');
+                } else {
+                    b.classList.remove('active');
+                }
+            });
+
+            // Filter items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        };
+
         document.querySelectorAll('.faq-cat-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                const category = btn.dataset.category;
-
-                // Update active button
-                document.querySelectorAll('.faq-cat-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                // Filter items
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    if (category === 'all' || item.dataset.category === category) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
+                filterCategory(btn.dataset.category);
             });
         });
+
+        // Handle URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const catParam = urlParams.get('category');
+        if (catParam) {
+            filterCategory(catParam);
+        }
     </script>
 </body>
 </html>
